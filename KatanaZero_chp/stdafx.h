@@ -49,6 +49,16 @@ using namespace SimpleMath;
 
 #include <DirectXTex.h>
 
+
+//FMOD
+#include "_Libraries/FMOD/fmod.hpp"
+#ifdef _M_X64
+	#pragma comment(lib, "_Libraries/FMOD/x64/fmodL_vc.lib")
+#elif _M_IX86
+	#pragma comment(lib, "_Libraries/FMOD/x86/fmodL_vc.lib")
+#endif
+
+
 //Macros
 #define WIN_DEFAULT_WIDTH 1280.0f
 #define WIN_DEFAULT_HEIGHT 720.0f
@@ -74,3 +84,11 @@ static CLASS_NAME* Get()									\
 	static CLASS_NAME instance;								\
 	return &instance;										\
 }
+
+//Systems
+#include "Systems/Input.h"
+#include "Systems/Time.h"
+#include "Systems/Sound.h"
+
+//Utillities
+#include "Utillities/String.h"

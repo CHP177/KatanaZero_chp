@@ -13,6 +13,12 @@
     <ClInclude Include="Systems\Time.h">
       <Filter>Systems</Filter>
     </ClInclude>
+    <ClInclude Include="Systems\Sound.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Utillities\String.h">
+      <Filter>Utillities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -26,6 +32,12 @@
     </ClCompile>
     <ClCompile Include="Systems\Time.cpp">
       <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Utillities\String.cpp">
+      <Filter>Utillities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
