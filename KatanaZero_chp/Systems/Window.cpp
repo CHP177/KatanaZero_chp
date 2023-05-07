@@ -94,10 +94,18 @@ WPARAM Window::Run()
 		else
 		{
 			//Systems
-
+			INPUT->Update();
+			TIME->Update();
 
 			//Program
 			program->Update();
+
+			GRAPHICS->Begin();
+			{
+				program->Render();
+
+			}
+			GRAPHICS->End();
 		}
 	}
 

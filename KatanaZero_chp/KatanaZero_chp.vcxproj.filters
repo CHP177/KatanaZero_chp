@@ -31,6 +31,7 @@
     <ClInclude Include="Renders\Shaders\IShader.h" />
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
     <ClInclude Include="Renders\Shaders\PixelShader.h" />
+    <ClInclude Include="Object\Object.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -61,6 +62,7 @@
     <ClCompile Include="Renders\Shaders\IShader.cpp" />
     <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
     <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
+    <ClCompile Include="Object\Object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

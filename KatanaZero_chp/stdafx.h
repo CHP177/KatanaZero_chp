@@ -106,6 +106,7 @@ static CLASS_NAME* Get()									\
 #include "Renders/Shaders/IShader.h"
 #include "Renders/Shaders/VertexShader.h"
 #include "Renders/IA/InputLayout.h"
+#include "Renders/Shaders/PixelShader.h"
 
 #include "Renders/Resources/ConstantBuffer.h"
 #include "Renders/Resources/GlobalBuffers.h"
