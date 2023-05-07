@@ -1,9 +1,9 @@
 ﻿#pragma once
 
 //Console Windows
-#ifdef _DEBUG
-#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
-#endif
+//#ifdef _DEBUG
+//#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+//#endif
 
 #include "targetver.h"
 #define WIN32_LEAN_AND_MEAN             // 거의 사용되지 않는 내용을 Windows 헤더에서 제외합니다.
@@ -62,7 +62,7 @@ using namespace SimpleMath;
 #define WIN_DEFAULT_WIDTH 1280.0f
 #define WIN_DEFAULT_HEIGHT 720.0f
 
-#define CHECK(hr) { assert(SUCCEEDED(hr)) }
+#define CHECK(hr) { assert(SUCCEEDED(hr)); }
 
 //Extern Globals
 extern HWND gHandle;
