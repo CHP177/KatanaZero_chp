@@ -58,10 +58,11 @@ using namespace SimpleMath;
 	#pragma comment(lib, "_Libraries/FMOD/x86/fmodL_vc.lib")
 #endif
 
-
 //Macros
 #define WIN_DEFAULT_WIDTH 1280.0f
 #define WIN_DEFAULT_HEIGHT 720.0f
+
+#define CHECK(hr) { assert(SUCCEEDED(hr)) }
 
 //Extern Globals
 extern HWND gHandle;

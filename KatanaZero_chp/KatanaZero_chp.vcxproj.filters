@@ -19,6 +19,7 @@
     <ClInclude Include="Utillities\String.h">
       <Filter>Utillities</Filter>
     </ClInclude>
+    <ClInclude Include="Utillities\Path.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -39,6 +40,7 @@
     <ClCompile Include="Utillities\String.cpp">
       <Filter>Utillities</Filter>
     </ClCompile>
+    <ClCompile Include="Utillities\Path.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

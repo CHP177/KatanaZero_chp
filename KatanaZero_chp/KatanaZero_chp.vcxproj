@@ -161,6 +161,7 @@
     <ClInclude Include="Systems\Window.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Systems\Time.h" />
+    <ClInclude Include="Utillities\Path.h" />
     <ClInclude Include="Utillities\String.h" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,7 @@
     <ClCompile Include="Systems\Window.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Systems\Time.cpp" />
+    <ClCompile Include="Utillities\Path.cpp" />
     <ClCompile Include="Utillities\String.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
