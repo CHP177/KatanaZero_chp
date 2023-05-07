@@ -30,6 +30,7 @@
     <ClInclude Include="Renders\Resources\GlobalBuffers.h" />
     <ClInclude Include="Renders\Shaders\IShader.h" />
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
+    <ClInclude Include="Renders\Shaders\PixelShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -59,6 +60,7 @@
     <ClCompile Include="Renders\IA\InputLayout.cpp" />
     <ClCompile Include="Renders\Shaders\IShader.cpp" />
     <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
+    <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Renders\Shaders\PixelShader.h" />
     <ClInclude Include="Renders\Shaders\IShader.h" />
     <ClInclude Include="Renders\IA\InputLayout.h" />
     <ClInclude Include="Renders\IA\IndexBuffer.h" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
     <ClCompile Include="Renders\Shaders\IShader.cpp" />
     <ClCompile Include="Renders\IA\InputLayout.cpp" />
     <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
