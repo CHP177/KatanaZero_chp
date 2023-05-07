@@ -25,6 +25,7 @@
     </ClInclude>
     <ClInclude Include="Renders\IA\IndexBuffer.h" />
     <ClInclude Include="Renders\IA\VertexBuffer.h" />
+    <ClInclude Include="Renders\IA\InputLayout.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -51,6 +52,7 @@
     </ClCompile>
     <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
     <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
+    <ClCompile Include="Renders\IA\InputLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

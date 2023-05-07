@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Renders\IA\InputLayout.h" />
     <ClInclude Include="Renders\IA\IndexBuffer.h" />
     <ClInclude Include="Renders\IA\VertexBuffer.h" />
     <ClInclude Include="Systems\Graphics.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Utillities\String.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Renders\IA\InputLayout.cpp" />
     <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
     <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
     <ClCompile Include="Systems\Graphics.cpp" />
