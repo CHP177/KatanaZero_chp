@@ -24,6 +24,7 @@
       <Filter>Systems</Filter>
     </ClInclude>
     <ClInclude Include="Renders\IA\IndexBuffer.h" />
+    <ClInclude Include="Renders\IA\VertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -49,6 +50,7 @@
       <Filter>Systems</Filter>
     </ClCompile>
     <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
+    <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
