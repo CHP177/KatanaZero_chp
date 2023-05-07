@@ -103,6 +103,10 @@ static CLASS_NAME* Get()									\
 #include "Renders/IA/VertexBuffer.h"
 #include "Renders/IA/IndexBuffer.h"
 
+#include "Renders/Shaders/IShader.h"
+#include "Renders/Shaders/VertexShader.h"
+#include "Renders/IA/InputLayout.h"
+
 #include "Renders/Resources/ConstantBuffer.h"
 #include "Renders/Resources/GlobalBuffers.h"
 

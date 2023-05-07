@@ -29,6 +29,7 @@
     <ClInclude Include="Renders\Resources\ConstantBuffer.h" />
     <ClInclude Include="Renders\Resources\GlobalBuffers.h" />
     <ClInclude Include="Renders\Shaders\IShader.h" />
+    <ClInclude Include="Renders\Shaders\VertexShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -57,6 +58,7 @@
     <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
     <ClCompile Include="Renders\IA\InputLayout.cpp" />
     <ClCompile Include="Renders\Shaders\IShader.cpp" />
+    <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
