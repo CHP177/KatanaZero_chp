@@ -99,5 +99,12 @@ static CLASS_NAME* Get()									\
 #define DEVICE GRAPHICS->GetDevice()
 #define DC GRAPHICS->GetDC()
 
+//Headers
+#include "Renders/IA/VertexBuffer.h"
+#include "Renders/IA/IndexBuffer.h"
+
+#include "Renders/Resources/ConstantBuffer.h"
+#include "Renders/Resources/GlobalBuffers.h"
+
 //Utillities
 #include "Utillities/String.h"
