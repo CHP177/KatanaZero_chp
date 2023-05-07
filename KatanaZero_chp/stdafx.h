@@ -89,7 +89,15 @@ static CLASS_NAME* Get()									\
 //Systems
 #include "Systems/Input.h"
 #include "Systems/Time.h"
+#include "Systems/Graphics.h"
 #include "Systems/Sound.h"
+
+//Singleton Getter Macros
+#define INPUT Input::Get()
+#define TIME Time::Get()
+#define GRAPHICS Graphics::Get()
+#define DEVICE GRAPHICS->GetDevice()
+#define DC GRAPHICS->GetDC()
 
 //Utillities
 #include "Utillities/String.h"

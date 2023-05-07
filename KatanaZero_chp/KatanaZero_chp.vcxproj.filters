@@ -23,6 +23,7 @@
     <ClInclude Include="Systems\Graphics.h">
       <Filter>Systems</Filter>
     </ClInclude>
+    <ClInclude Include="Renders\IA\IndexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -47,6 +48,7 @@
     <ClCompile Include="Systems\Graphics.cpp">
       <Filter>Systems</Filter>
     </ClCompile>
+    <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
