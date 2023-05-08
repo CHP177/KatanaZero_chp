@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Utillities\Collision.h" />
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Renders\Shaders\PixelShader.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Utillities\Collision.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
     <ClCompile Include="Renders\Shaders\IShader.cpp" />

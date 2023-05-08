@@ -33,6 +33,7 @@
     <ClInclude Include="Renders\Shaders\PixelShader.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Utillities\Collision.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -64,6 +65,7 @@
     <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
     <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
     <ClCompile Include="Object\Object.cpp" />
+    <ClCompile Include="Utillities\Collision.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
