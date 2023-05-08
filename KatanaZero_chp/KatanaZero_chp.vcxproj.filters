@@ -32,6 +32,7 @@
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
     <ClInclude Include="Renders\Shaders\PixelShader.h" />
     <ClInclude Include="Object\Object.h" />
+    <ClInclude Include="Component\Component.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />

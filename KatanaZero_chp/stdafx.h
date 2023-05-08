@@ -113,3 +113,10 @@ static CLASS_NAME* Get()									\
 
 //Utillities
 #include "Utillities/String.h"
+#include "Utillities/Path.h"
+
+//Component
+#include "Component/Component.h"
+
+//Object
+#include "Object/Object.h"
