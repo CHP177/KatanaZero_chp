@@ -64,6 +64,10 @@ using namespace SimpleMath;
 
 #define CHECK(hr) { assert(SUCCEEDED(hr)); }
 
+//Vector Macros
+#define RIGHT Vector2(1.0f, 0.0f)
+#define UP Vector2(0.0f, 1.0f)
+
 //Extern Globals
 extern HWND gHandle;
 extern HDC gHDC;
@@ -112,8 +116,10 @@ static CLASS_NAME* Get()									\
 #include "Renders/Resources/GlobalBuffers.h"
 
 //Utillities
+#include "Utillities/Collision.h"
 #include "Utillities/String.h"
 #include "Utillities/Path.h"
+
 
 //Component
 #include "Component/Component.h"

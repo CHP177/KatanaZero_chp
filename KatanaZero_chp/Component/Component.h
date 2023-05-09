@@ -19,7 +19,7 @@ public:
 	virtual void Update() {}
 	virtual void Render() {}
 
-private:
+protected:
 	string name;
 	Object* owner = nullptr;
 
