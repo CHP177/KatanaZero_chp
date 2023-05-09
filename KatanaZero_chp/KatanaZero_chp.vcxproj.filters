@@ -34,6 +34,7 @@
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Utillities\Collision.h" />
+    <ClInclude Include="Systems\Camera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -66,6 +67,7 @@
     <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Utillities\Collision.cpp" />
+    <ClCompile Include="Systems\Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
