@@ -155,7 +155,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Component\ColliderComponent.h" />
+    <ClInclude Include="Scenes\IScene.h" />
+    <ClInclude Include="Scenes\SceneList.h" />
     <ClInclude Include="Systems\Camera.h" />
+    <ClInclude Include="Scenes\testScene.h" />
     <ClInclude Include="Utillities\Collision.h" />
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Object\Object.h" />
@@ -181,6 +184,7 @@
   <ItemGroup>
     <ClCompile Include="Component\ColliderComponent.cpp" />
     <ClCompile Include="Systems\Camera.cpp" />
+    <ClCompile Include="Scenes\testScene.cpp" />
     <ClCompile Include="Utillities\Collision.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="Renders\Shaders\PixelShader.cpp" />

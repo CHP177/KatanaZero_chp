@@ -12,7 +12,7 @@ public:
 	void InputProc(UINT message, LPARAM lParam);
 
 	bool Down(DWORD key) { return keyMap[key] == KEY_INPUT_STATUS_DOWN; }
-	bool UP(DWORD key) { return keyMap[key] == KEY_INPUT_STATUS_UP; }
+	bool Up(DWORD key) { return keyMap[key] == KEY_INPUT_STATUS_UP; }
 	bool Press(DWORD key) { return keyMap[key] == KEY_INPUT_STATUS_PRESS; }
 	bool DblCkl() { return isDblClk; }
 

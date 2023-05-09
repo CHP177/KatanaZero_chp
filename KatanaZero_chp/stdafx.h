@@ -95,6 +95,7 @@ static CLASS_NAME* Get()									\
 #include "Systems/Time.h"
 #include "Systems/Graphics.h"
 #include "Systems/Sound.h"
+#include "Systems/Camera.h"
 
 //Singleton Getter Macros
 #define INPUT Input::Get()
@@ -102,6 +103,7 @@ static CLASS_NAME* Get()									\
 #define GRAPHICS Graphics::Get()
 #define DEVICE GRAPHICS->GetDevice()
 #define DC GRAPHICS->GetDC()
+#define CAMERA Camera::Get()
 
 //Headers
 #include "Renders/IA/VertexBuffer.h"
@@ -126,3 +128,6 @@ static CLASS_NAME* Get()									\
 
 //Object
 #include "Object/Object.h"
+
+//Scene
+#include "Scenes/IScene.h"
