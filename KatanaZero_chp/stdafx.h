@@ -44,11 +44,10 @@ using namespace WRL;
 
 //DirectXTK & TK
 #include "_Libraries/DirectXTK/SimpleMath.h"
-using namespace DirectX;
-using namespace SimpleMath;
-
 #include <DirectXTex.h>
 
+using namespace DirectX;
+using namespace SimpleMath;
 
 //FMOD
 #include "_Libraries/FMOD/fmod.hpp"

@@ -36,6 +36,9 @@
     <ClInclude Include="Utillities\Collision.h" />
     <ClInclude Include="Systems\Camera.h" />
     <ClInclude Include="Component\ColliderComponent.h" />
+    <ClInclude Include="Scenes\IScene.h" />
+    <ClInclude Include="Scenes\SceneList.h" />
+    <ClInclude Include="Scenes\testScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -70,6 +73,7 @@
     <ClCompile Include="Utillities\Collision.cpp" />
     <ClCompile Include="Systems\Camera.cpp" />
     <ClCompile Include="Component\ColliderComponent.cpp" />
+    <ClCompile Include="Scenes\testScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
