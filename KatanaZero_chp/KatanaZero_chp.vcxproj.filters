@@ -39,6 +39,7 @@
     <ClInclude Include="Scenes\IScene.h" />
     <ClInclude Include="Scenes\SceneList.h" />
     <ClInclude Include="Scenes\testScene.h" />
+    <ClInclude Include="Utillities\RenderTexture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -74,6 +75,7 @@
     <ClCompile Include="Systems\Camera.cpp" />
     <ClCompile Include="Component\ColliderComponent.cpp" />
     <ClCompile Include="Scenes\testScene.cpp" />
+    <ClCompile Include="Utillities\RenderTexture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

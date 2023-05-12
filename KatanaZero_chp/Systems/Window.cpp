@@ -100,9 +100,11 @@ WPARAM Window::Run()
 			//Program
 			program->Update();
 
+			program->PreRender();
 			GRAPHICS->Begin();
 			{
 				program->Render();
+				program->PostRender();
 
 			}
 			GRAPHICS->End();

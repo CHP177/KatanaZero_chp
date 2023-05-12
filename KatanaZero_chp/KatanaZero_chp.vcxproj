@@ -171,6 +171,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Component\ColliderComponent.h" />
+    <ClInclude Include="Utillities\RenderTexture.h" />
     <ClInclude Include="Scenes\IScene.h" />
     <ClInclude Include="Scenes\SceneList.h" />
     <ClInclude Include="Systems\Camera.h" />
@@ -199,6 +200,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component\ColliderComponent.cpp" />
+    <ClCompile Include="Utillities\RenderTexture.cpp" />
     <ClCompile Include="Systems\Camera.cpp" />
     <ClCompile Include="Scenes\testScene.cpp" />
     <ClCompile Include="Utillities\Collision.cpp" />
