@@ -170,6 +170,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animator.h" />
     <ClInclude Include="Component\ColliderComponent.h" />
     <ClInclude Include="Utillities\RenderTexture.h" />
     <ClInclude Include="Scenes\IScene.h" />
@@ -199,6 +200,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animator.cpp" />
     <ClCompile Include="Component\ColliderComponent.cpp" />
     <ClCompile Include="Utillities\RenderTexture.cpp" />
     <ClCompile Include="Systems\Camera.cpp" />
