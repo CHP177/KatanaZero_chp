@@ -65,6 +65,27 @@ using namespace SimpleMath;
 
 #define SUPER __super
 
+#define CENTER_X (WIN_DEFAULT_WIDTH / 2)
+#define CENTER_Y (WIN_DEFAULT_HEIGHT/ 2)
+#define CENTER Vector2(CENTER_X, CENTER_Y)
+
+//Color Macros
+#define NONECOLOR Color(0, 0, 0, 0)
+#define WHITE Color(1, 1, 1, 1)
+#define BLACK Color(0, 0, 0, 1)
+#define RED Color(1, 0, 0, 1)
+#define GREEN Color(0, 1, 0, 1)
+#define BLUE Color(0, 0, 1, 1)
+#define YELLOW Color(1, 1, 0, 1)
+#define MAGENTA Color(1, 0, 1, 1)
+#define CYAN Color(0, 1, 1, 1)
+#define ORANGE Color(1, 0.5f, 0, 1)
+#define ROSE Color(1, 0, 0.5f, 1)
+#define CHARTREUSEGREEN Color(0.5f, 1, 0, 1)
+#define SPRINGGREEN Color(0, 1, 0.5f, 1)
+#define VIOLET Color(0.5f, 0, 1, 1)
+#define AZURE Color(0, 0.5f, 1, 1)
+
 //Vector Macros
 #define RIGHT Vector2(1.0f, 0.0f)
 #define UP Vector2(0.0f, 1.0f)
@@ -107,6 +128,10 @@ static CLASS_NAME* Get()									\
 #define CAMERA Camera::Get()
 
 //Headers
+#include "Renders/Resources/ConstantBuffer.h"
+#include "Renders/Resources/GlobalBuffers.h"
+#include "Renders/Resources/VertexType.h"
+
 #include "Renders/IA/VertexBuffer.h"
 #include "Renders/IA/IndexBuffer.h"
 
@@ -115,20 +140,22 @@ static CLASS_NAME* Get()									\
 #include "Renders/IA/InputLayout.h"
 #include "Renders/Shaders/PixelShader.h"
 
-#include "Renders/Resources/ConstantBuffer.h"
-#include "Renders/Resources/GlobalBuffers.h"
-
 //Utillities
 #include "Utillities/Collision.h"
 #include "Utillities/String.h"
 #include "Utillities/Path.h"
-
+#include "Utillities/RenderTexture.h"
+#include "Utillities/Animator.h"
 
 //Component
 #include "Component/Component.h"
+#include "Component/ColliderComponent.h"
+#include "Component/ColorComponent.h"
 
 //Object
 #include "Object/Object.h"
+#include "Object/Drawable.h"
+#include "Object/LineRect.h"
 
 //Scene
 #include "Scenes/IScene.h"

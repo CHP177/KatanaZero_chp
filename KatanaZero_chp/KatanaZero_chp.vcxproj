@@ -170,7 +170,9 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Drawable.h" />
+    <ClInclude Include="Component\ColorComponent.h" />
+    <ClInclude Include="Object\LineRect.h" />
+    <ClInclude Include="Object\Drawable.h" />
     <ClInclude Include="Utillities\Animator.h" />
     <ClInclude Include="Component\ColliderComponent.h" />
     <ClInclude Include="Utillities\RenderTexture.h" />
@@ -199,9 +201,12 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Utillities\Path.h" />
     <ClInclude Include="Utillities\String.h" />
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
+    <ClInclude Include="Renders\Resources\VertexType.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Drawable.cpp" />
+    <ClCompile Include="Component\ColorComponent.cpp" />
+    <ClCompile Include="Object\LineRect.cpp" />
+    <ClCompile Include="Object\Drawable.cpp" />
     <ClCompile Include="Utillities\Animator.cpp" />
     <ClCompile Include="Component\ColliderComponent.cpp" />
     <ClCompile Include="Utillities\RenderTexture.cpp" />
@@ -230,6 +235,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClCompile Include="Utillities\Path.cpp" />
     <ClCompile Include="Utillities\String.cpp" />
     <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
+    <ClCompile Include="Renders\Resources\VertexType.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -26,7 +26,6 @@ class ViewProjectionBuffer : public ConstantBuffer
 {
 public:
 	struct ViewProjStruct
-
 	{
 		Matrix view;
 		Matrix projection;
@@ -47,5 +46,26 @@ public:
 
 private:
 	ViewProjStruct data;
+
+};
+
+class ColorBuffer : public ConstantBuffer
+{
+public:
+	struct ColorStruct
+	{
+		Color color;
+	};
+
+public:
+	ColorBuffer() : ConstantBuffer(&data, sizeof(ColorBuffer)) {}
+
+	void SetColor(const Color& color)
+	{
+		data.color = color;
+	}
+
+private:
+	ColorStruct data;
 
 };

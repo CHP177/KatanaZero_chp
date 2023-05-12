@@ -17,6 +17,10 @@ public:
 	virtual ~Object() {}
 
 public:
+	void AddComponent(const shared_ptr<Component>& component);
+	void DeleteComponent(const string& name);
+
+public:
 	inline Vector2 GetPosition() const { return position; }
 	inline Vector2 GetScale() const { return scale; }
 
@@ -54,6 +58,7 @@ public:
 
 protected:
 	string name;
+	map<string, shared_ptr<Component>> components;
 
 protected:
 	unique_ptr<WorldBuffer> WB;
@@ -61,5 +66,7 @@ protected:
 
 	Vector2 position, scale;
 	float rotation = 0.0f;
+
+	Color color;
 
 };

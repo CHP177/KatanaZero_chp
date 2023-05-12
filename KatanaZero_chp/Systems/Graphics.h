@@ -42,7 +42,7 @@ private:
 
 	ComPtr<ID3D11RenderTargetView> rtv;
 	D3D11_VIEWPORT viewport = { 0 };
-	Color clearColor = { 0.0f, 0.0f, 0.0f, 1.0f };
+	Color clearColor = BLACK;
 
 	//refreshrator
 	UINT numerator = 0;
