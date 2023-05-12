@@ -49,8 +49,8 @@ public:
 	void Rotate(float rotation) { this->rotation += XMConvertToRadians(rotation) * TIME->GetDeltaTime(); }
 
 public:
-	void Update();
-	void Render();
+	virtual void Update();
+	virtual void Render();
 
 protected:
 	string name;

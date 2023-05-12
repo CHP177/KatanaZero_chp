@@ -63,6 +63,8 @@ using namespace SimpleMath;
 
 #define CHECK(hr) { assert(SUCCEEDED(hr)); }
 
+#define SUPER __super
+
 //Vector Macros
 #define RIGHT Vector2(1.0f, 0.0f)
 #define UP Vector2(0.0f, 1.0f)
