@@ -173,6 +173,8 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Component\ColorComponent.h" />
     <ClInclude Include="Object\LineRect.h" />
     <ClInclude Include="Object\Drawable.h" />
+    <ClInclude Include="Component\TextureComponent.h" />
+    <ClInclude Include="Object\TextureRect.h" />
     <ClInclude Include="Utillities\Animator.h" />
     <ClInclude Include="Component\ColliderComponent.h" />
     <ClInclude Include="Utillities\RenderTexture.h" />
@@ -207,6 +209,8 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClCompile Include="Component\ColorComponent.cpp" />
     <ClCompile Include="Object\LineRect.cpp" />
     <ClCompile Include="Object\Drawable.cpp" />
+    <ClCompile Include="Component\TextureComponent.cpp" />
+    <ClCompile Include="Object\TextureRect.cpp" />
     <ClCompile Include="Utillities\Animator.cpp" />
     <ClCompile Include="Component\ColliderComponent.cpp" />
     <ClCompile Include="Utillities\RenderTexture.cpp" />

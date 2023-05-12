@@ -45,6 +45,8 @@
     <ClInclude Include="Object\LineRect.h" />
     <ClInclude Include="Component\ColorComponent.h" />
     <ClInclude Include="Renders\Resources\VertexType.h" />
+    <ClInclude Include="Object\TextureRect.h" />
+    <ClInclude Include="Component\TextureComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -86,6 +88,8 @@
     <ClCompile Include="Object\LineRect.cpp" />
     <ClCompile Include="Component\ColorComponent.cpp" />
     <ClCompile Include="Renders\Resources\VertexType.cpp" />
+    <ClCompile Include="Object\TextureRect.cpp" />
+    <ClCompile Include="Component\TextureComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
