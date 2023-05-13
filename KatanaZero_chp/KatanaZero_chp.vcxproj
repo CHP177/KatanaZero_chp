@@ -171,6 +171,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Component\ColorComponent.h" />
+    <ClInclude Include="Gui.h" />
     <ClInclude Include="Object\LineRect.h" />
     <ClInclude Include="Object\Drawable.h" />
     <ClInclude Include="Component\TextureComponent.h" />
@@ -207,6 +208,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component\ColorComponent.cpp" />
+    <ClCompile Include="Gui.cpp" />
     <ClCompile Include="Object\LineRect.cpp" />
     <ClCompile Include="Object\Drawable.cpp" />
     <ClCompile Include="Component\TextureComponent.cpp" />

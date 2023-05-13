@@ -49,6 +49,12 @@ using namespace WRL;
 using namespace DirectX;
 using namespace SimpleMath;
 
+//ImGui
+#include <imgui.h>
+#include <imgui_internal.h>
+#include <imgui_impl_win32.h>
+#include <imgui_impl_dx11.h>
+
 //FMOD
 #include "_Libraries/FMOD/fmod.hpp"
 #ifdef _M_X64

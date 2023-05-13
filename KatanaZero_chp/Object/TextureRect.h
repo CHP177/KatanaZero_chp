@@ -8,6 +8,7 @@ public:
 public:
 	void Update() override;
 	void Render() override;
+	void GUI(int ordinal);
 
 public:
 	void ChangeImageFunc(const wstring& path = L"");

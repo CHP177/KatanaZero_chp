@@ -19,6 +19,14 @@ public:
 public:
 	void AddComponent(const shared_ptr<Component>& component);
 	void DeleteComponent(const string& name);
+	template<typename T>
+	shared_ptr<T> GetComponent(const string& compName) const
+	{
+		if (!components.count(compName))
+			return nullptr;
+
+		return dynamic_pointer_cast<T>(components.at(compName));
+	}
 
 public:
 	inline Vector2 GetPosition() const { return position; }

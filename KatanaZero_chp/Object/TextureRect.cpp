@@ -38,6 +38,10 @@ void TextureRect::Render()
 	DC->OMSetBlendState(nullptr, nullptr, 0xffffffff);
 }
 
+void TextureRect::GUI(int ordinal)
+{
+}
+
 void TextureRect::ChangeImageFunc(const wstring& path)
 {
 }
