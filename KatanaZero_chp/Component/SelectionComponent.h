@@ -3,7 +3,7 @@
 class SelectionComponent : public Component
 {
 public:
-	SelectionComponent(UINT slot = 1, const bool* bOutline = false);
+	SelectionComponent(UINT slot = 1, const bool& bOutline = false);
 
 public:
 	void Update() override;
