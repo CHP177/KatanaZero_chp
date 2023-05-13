@@ -40,16 +40,68 @@ void TextureRect::Render()
 
 void TextureRect::GUI(int ordinal)
 {
+	string objName = name + to_string(ordinal);
+	string imgName = "Image : " + String::ToString(Path::GetFileName(GetComponent<TextureComponent>("Texture")->GetPath()));
+	string shaderName = "Shader : " + String::ToString(Path::GetFileName(shaderPath));
+
+	if (ImGui::BeginMenu(objName.c_str()))
+	{
+		GetComponent<SelectionComponent>("Selection")->SetOutline(true);
+
+		ImGui::Text(objName.c_str());
+		ImGui::Text(imgName.c_str());
+		ImGui::Text(shaderName.c_str());
+
+		if (ImGui::Button("ChangeImage", ImVec2(100, 25)))
+			ChangeImageFunc();
+		if (ImGui::Button("ChangeShader", ImVec2(100, 25)))
+			ChangeShaderFunc();
+
+		SUPER::GUI();
+
+		ImGui::EndMenu();
+	}
+	else
+		GetComponent<SelectionComponent>("Selection")->SetOutline(false);
 }
 
 void TextureRect::ChangeImageFunc(const wstring& path)
 {
+	if (path.empty())
+	{
+		function<void(wstring)> func = bind(&TextureRect::ChangeImageFunc, this, placeholders::_1);
+		Path::OpenFileDialog(L"", Path::ImageFilter, L"_Textures/", func, gHandle);
+	}
+	else
+		GetComponent<TextureComponent>("Texture")->SetSRV(path);
 }
 
 void TextureRect::ChangeShaderFunc(const wstring& path)
 {
+	if (path.empty())
+	{
+		function<void(wstring)> func = bind(&TextureRect::ChangeShaderFunc, this, placeholders::_1);
+		Path::OpenFileDialog(L"", Path::ShaderFilter, L"_Shaders/", func, gHandle);
+	}
+	else
+		SetShader(path);
 }
 
 void TextureRect::SaveTextAsFile(const string& text, const wstring& path)
 {
+	if (path.empty())
+	{
+		function<void(wstring)> func = bind(&TextureRect::SaveTextAsFile, this, text, placeholders::_1);
+		Path::SaveFileDialog(L"", Path::TextFilter, L"./", func, gHandle);
+	}
+	else
+	{
+		ofstream writeFile(path.c_str());
+		if (writeFile.is_open())
+		{
+			writeFile << text << '\n';
+			writeFile.clear();
+		}
+		writeFile.close();
+	}
 }

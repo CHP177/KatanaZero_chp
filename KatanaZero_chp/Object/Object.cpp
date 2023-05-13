@@ -30,3 +30,10 @@ void Object::Render()
 {
 	WB->SetVSBuffer(0);
 }
+
+void Object::GUI()
+{
+	ImGui::SliderFloat2("Translation", (float*)&position, 0, gWinWidth, "%.2f");
+	ImGui::SliderFloat2("Scale", (float*)&scale, 1, gWinWidth, "%.2f");
+	ImGui::SliderAngle("Rotation", &rotation);
+}

@@ -13,10 +13,7 @@ public:
 public:
 	WorldBuffer() : ConstantBuffer(&data, sizeof(WorldStruct)) {}
 
-	void SetWorld(const Matrix& world)
-	{
-		data.world = XMMatrixTranspose(world);
-	}
+	void SetWorld(const Matrix& world) { data.world = XMMatrixTranspose(world); }
 
 private:
 	WorldStruct data;
@@ -34,15 +31,8 @@ public:
 public:
 	ViewProjectionBuffer() : ConstantBuffer(&data, sizeof(ViewProjStruct)) {}
 
-	void SetView(const Matrix& view)
-	{
-		data.view = XMMatrixTranspose(view);
-	}
-
-	void SetProjection(const Matrix& projection)
-	{
-		data.projection = XMMatrixTranspose(projection);
-	}
+	void SetView(const Matrix& view) { data.view = XMMatrixTranspose(view); }
+	void SetProjection(const Matrix& projection) { data.projection = XMMatrixTranspose(projection); }
 
 private:
 	ViewProjStruct data;
@@ -60,12 +50,30 @@ public:
 public:
 	ColorBuffer() : ConstantBuffer(&data, sizeof(ColorBuffer)) {}
 
-	void SetColor(const Color& color)
-	{
-		data.color = color;
-	}
+	void SetColor(const Color& color) { data.color = color; }
 
 private:
 	ColorStruct data;
+
+};
+
+class SelectionBuffer : public ConstantBuffer
+{
+	struct SelectionStruct
+	{
+		UINT selection = 1;
+		Vector2 textureSize = { gWinWidth, gWinHeight };
+		bool bOutline = false;
+	};
+
+public:
+	SelectionBuffer() : ConstantBuffer(&data, sizeof(SelectionStruct)) {}
+
+	void SetSeletion(const UINT& selection) { data.selection = selection; }
+	void SetTextureSize(const Vector2& size) { data.textureSize = size; }
+	void SetOutline(const bool& bOutline) { data.bOutline = bOutline; }
+
+private:
+	SelectionStruct data;
 
 };

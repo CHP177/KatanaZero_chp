@@ -98,7 +98,8 @@
       <Filter>Renders\IA</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Gui.h" />
-    <ClInclude Include="AnimationRect.h" />
+    <ClInclude Include="Object\AnimationRect.h" />
+    <ClInclude Include="Component\SelectionComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -183,7 +184,8 @@
       <Filter>Renders\IA</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Gui.cpp" />
-    <ClCompile Include="AnimationRect.cpp" />
+    <ClCompile Include="Object\AnimationRect.cpp" />
+    <ClCompile Include="Component\SelectionComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

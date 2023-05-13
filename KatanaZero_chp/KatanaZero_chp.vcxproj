@@ -170,8 +170,9 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AnimationRect.h" />
+    <ClInclude Include="Object\AnimationRect.h" />
     <ClInclude Include="Component\ColorComponent.h" />
+    <ClInclude Include="Component\SelectionComponent.h" />
     <ClInclude Include="Systems\Gui.h" />
     <ClInclude Include="Object\LineRect.h" />
     <ClInclude Include="Object\Drawable.h" />
@@ -208,8 +209,9 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Renders\Resources\VertexType.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnimationRect.cpp" />
+    <ClCompile Include="Object\AnimationRect.cpp" />
     <ClCompile Include="Component\ColorComponent.cpp" />
+    <ClCompile Include="Component\SelectionComponent.cpp" />
     <ClCompile Include="Systems\Gui.cpp" />
     <ClCompile Include="Object\LineRect.cpp" />
     <ClCompile Include="Object\Drawable.cpp" />

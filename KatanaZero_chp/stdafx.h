@@ -158,12 +158,14 @@ static CLASS_NAME* Get()									\
 #include "Component/ColliderComponent.h"
 #include "Component/ColorComponent.h"
 #include "Component/TextureComponent.h"
+#include "Component/SelectionComponent.h"
 
 //Object
 #include "Object/Object.h"
 #include "Object/Drawable.h"
 #include "Object/LineRect.h"
 #include "Object/TextureRect.h"
+#include "Object/AnimationRect.h"
 
 //Scene
 #include "Scenes/IScene.h"

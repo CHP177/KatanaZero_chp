@@ -64,6 +64,8 @@ public:
 	virtual void Update();
 	virtual void Render();
 
+	virtual void GUI();
+
 protected:
 	string name;
 	map<string, shared_ptr<Component>> components;
