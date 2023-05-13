@@ -97,7 +97,8 @@
     <ClInclude Include="Renders\IA\VertexBuffer.h">
       <Filter>Renders\IA</Filter>
     </ClInclude>
-    <ClInclude Include="Gui.h" />
+    <ClInclude Include="Systems\Gui.h" />
+    <ClInclude Include="AnimationRect.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -181,7 +182,8 @@
     <ClCompile Include="Renders\IA\VertexBuffer.cpp">
       <Filter>Renders\IA</Filter>
     </ClCompile>
-    <ClCompile Include="Gui.cpp" />
+    <ClCompile Include="Systems\Gui.cpp" />
+    <ClCompile Include="AnimationRect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
