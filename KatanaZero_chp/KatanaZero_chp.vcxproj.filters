@@ -100,6 +100,8 @@
     <ClInclude Include="Systems\Gui.h" />
     <ClInclude Include="Object\AnimationRect.h" />
     <ClInclude Include="Component\SelectionComponent.h" />
+    <ClInclude Include="TileMap\TileSet.h" />
+    <ClInclude Include="TileMap\TileMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -186,6 +188,8 @@
     <ClCompile Include="Systems\Gui.cpp" />
     <ClCompile Include="Object\AnimationRect.cpp" />
     <ClCompile Include="Component\SelectionComponent.cpp" />
+    <ClCompile Include="TileMap\TileSet.cpp" />
+    <ClCompile Include="TileMap\TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">

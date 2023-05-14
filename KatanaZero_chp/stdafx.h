@@ -167,5 +167,11 @@ static CLASS_NAME* Get()									\
 #include "Object/TextureRect.h"
 #include "Object/AnimationRect.h"
 
+//TileMap
+#include "TileMap/TileMap.h"
+
+//GetComponent Macro
+#define GET_COMP(COMPNENT_NAME) GetComponent<COMPONENT_NAME##Component>(#COMPNENT_NAME)
+
 //Scene
 #include "Scenes/IScene.h"

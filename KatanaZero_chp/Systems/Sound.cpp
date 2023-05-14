@@ -129,10 +129,72 @@ void Sound::SetMasterVolume(float volume)
 
 void Sound::GUI(const string& key)
 {
-	//대기
+	auto iter = soundList.find(key);
+
+	if (iter != soundList.end())
+	{
+		string objName = "Sound" + key;
+		string fileName = Path::GetFileName(String::ToString(iter->second->path));
+		string GUIFileName = "File Name : " + fileName;
+
+		if (ImGui::BeginMenu(objName.c_str()))
+		{
+			ImGui::Text(objName.c_str());
+			ImGui::Text(GUIFileName.c_str());
+
+			//Button
+			if (ImGui::Button("Play", ImVec2(50, 30)))
+				Play(key);
+			ImGui::SameLine();
+			if (ImGui::Button("Stop", ImVec2(50, 30)))
+				Stop(key);
+			ImGui::SameLine();
+			if (ImGui::Button("Pause", ImVec2(50, 30)))
+				Pause(key);
+			ImGui::SameLine();
+			if (ImGui::Button("Resume", ImVec2(50, 30)))
+				Resume(key);
+
+			if (ImGui::Button("ChangeSound", ImVec2(218, 30)))
+				ChangeSoundFunc(key);
+
+			if (ImGui::SliderFloat("Volume", &iter->second->channelVolume, 0.0f, 1.0f))
+				SetVolume(key, iter->second->channelVolume);
+
+			if (ImGui::Checkbox("Mute", &iter->second->bMute))
+				iter->second->channel->setMute(iter->second->bMute);
+
+			if (ImGui::Checkbox("Loop", &iter->second->bLoop))
+			{
+				if (iter->second->bLoop)
+					iter->second->channel->setMode(FMOD_LOOP_NORMAL);
+				else
+					iter->second->channel->setMode(FMOD_LOOP_OFF);
+			}
+
+			ImGui::Checkbox("MultiPlay", &iter->second->canMulti);
+
+			ImGui::EndMenu();
+		}
+	}
 }
 
 void Sound::ChangeSoundFunc(const string& key, const wstring& path)
 {
-	//대기
+	auto iter = soundList.find(key);
+
+	if (iter != soundList.end())
+	{
+		if (path.empty())
+		{
+			function<void(wstring)> func = bind(&Sound::ChangeSoundFunc, this, key, placeholders::_1);
+			Path::OpenFileDialog(L"", Path::SoundFilter, L"_Sounds/", func, gHandle);
+		}
+		else
+		{
+			iter->second->channel->stop();
+			iter->second->path = path;
+			system->createSound(String::ToString(path).c_str(), FMOD_DEFAULT, nullptr, &iter->second->sound);
+		}
+	}
 }

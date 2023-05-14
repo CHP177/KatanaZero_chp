@@ -19,7 +19,7 @@ Camera::~Camera() {}
 
 void Camera::Update()
 {
-	
+	//카메라 수동 조작
 }
 
 void Camera::Render()
@@ -78,10 +78,8 @@ Vector2 Camera::UnProject(const Vector2& source)
 {
 	Vector2 output;
 
-	//viewport 역연산
 	output = (source / Vector2(WIN_DEFAULT_WIDTH, WIN_DEFAULT_HEIGHT) * 2.0f) - Vector2(1, 1);
 
-	//view * proj 역연산
 	Matrix VPInverse = (view * proj).Invert();
 
 	return XMVector2TransformCoord(output, VPInverse);
