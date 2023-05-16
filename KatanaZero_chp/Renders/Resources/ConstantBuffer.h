@@ -18,6 +18,7 @@ public:
 
 protected:
 	ConstantBuffer(void* data, const UINT& dataSize)
+		: data(data), dataSize(dataSize)
 	{
 		desc.Usage = D3D11_USAGE_DYNAMIC;
 		desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;

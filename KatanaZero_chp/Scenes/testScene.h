@@ -10,4 +10,9 @@ public:
 	void PreRender() override;
 	void Render() override;
 	void PostRender() override;
+
+private:
+	//unique_ptr<AnimationRect> player;
+	unique_ptr<LineRect> rect;
+
 };

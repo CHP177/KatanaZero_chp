@@ -171,13 +171,6 @@ void Graphics::CreateSwapChain()
 	gpuMemorySize = (UINT)adapterInfo->adapterDesc.DedicatedVideoMemory / 1024 / 1024; //GB
 	gpuDescription = adapterInfo->adapterDesc.Description;
 
-	cout << "DedicatedVideoMemory : " << gpuMemorySize << '\n';
-	wcout << "GPU Description : " << gpuDescription << '\n';
-
-	cout << "Numerator : " << numerator << '\n';
-	cout << "Denominator : " << denominator << '\n';
-	cout << "RefreshRate : " << numerator / denominator << "\n\n";
-
 	desc.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;						//Color Format
 	desc.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;	//Default
 	desc.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;					//Default
@@ -217,4 +210,5 @@ void Graphics::CreateRenderTargetView()
 void Graphics::DeleteSurface()
 {
 	rtv.Reset();
+
 }

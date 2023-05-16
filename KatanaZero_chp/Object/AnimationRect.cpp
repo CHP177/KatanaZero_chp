@@ -33,3 +33,4 @@ void AnimationRect::Render()
 {
 	SUPER::Render();
 }
+

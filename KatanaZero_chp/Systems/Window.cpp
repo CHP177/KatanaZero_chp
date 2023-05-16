@@ -31,16 +31,7 @@ Window::Window(const WinDesc& desc)
 	UINT centerX = (GetSystemMetrics(SM_CXSCREEN) - (UINT)this->desc.width) / 2;
 	UINT centerY = (GetSystemMetrics(SM_CYSCREEN) - (UINT)this->desc.height) / 2;
 
-	MoveWindow
-	(
-		this->desc.handle,
-		centerX,
-		centerY,
-		rect.right - rect.left,
-		rect.bottom - rect.top,
-		true
-	);
-
+	MoveWindow(this->desc.handle, centerX, centerY, rect.right - rect.left, rect.bottom - rect.top, true);
 	ShowWindow(this->desc.handle, SW_SHOWNORMAL);
 	UpdateWindow(this->desc.handle);
 
@@ -97,6 +88,9 @@ WPARAM Window::Run()
 			INPUT->Update();
 			TIME->Update();
 
+			IMGUI->Update();
+			SOUND->Update();
+
 			//Program
 			program->Update();
 
@@ -105,7 +99,7 @@ WPARAM Window::Run()
 			{
 				program->Render();
 				program->PostRender();
-
+				IMGUI->Render();
 			}
 			GRAPHICS->End();
 		}
@@ -116,6 +110,13 @@ WPARAM Window::Run()
 
 LRESULT Window::WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	if (gHandle != nullptr)
+	{
+		INPUT->InputProc(message, lParam);
+		if (IMGUI->MsgProc(handle, message, wParam, lParam))
+			return true;
+	}
+
 	switch (message)
 	{
 	case WM_CREATE:

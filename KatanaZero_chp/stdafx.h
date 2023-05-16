@@ -124,6 +124,7 @@ static CLASS_NAME* Get()									\
 #include "Systems/Graphics.h"
 #include "Systems/Sound.h"
 #include "Systems/Camera.h"
+#include "Systems/Gui.h"
 
 //Singleton Getter Macros
 #define INPUT Input::Get()
@@ -132,6 +133,8 @@ static CLASS_NAME* Get()									\
 #define DEVICE GRAPHICS->GetDevice()
 #define DC GRAPHICS->GetDC()
 #define CAMERA Camera::Get()
+#define SOUND Sound::Get()
+#define IMGUI Gui::Get()
 
 //Headers
 #include "Renders/Resources/ConstantBuffer.h"

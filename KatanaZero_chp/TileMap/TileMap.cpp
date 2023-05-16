@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "TileMap.h"
+#include "TileSet.h"
 
 TileMap::TileMap(const Vector2& position, const Vector2& scale, float rotation, const wstring& tileSetPath, UINT spacing)
 	: Drawable("TileMap", position, scale, rotation, L"_Shaders/VertexTile.hlsl"), spacing(spacing)

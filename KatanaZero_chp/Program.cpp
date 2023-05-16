@@ -29,10 +29,14 @@ void Program::PreRender()
 
 void Program::Render()
 {
+	CAMERA->Render();
+
 	currentScene->Render();
 }
 
 void Program::PostRender()
 {
 	currentScene->PostRender();
+
+	IMGUI->PrintFrame();
 }
