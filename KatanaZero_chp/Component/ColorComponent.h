@@ -1,4 +1,5 @@
 #pragma once
+
 class ColorComponent : public Component
 {
 public:
@@ -11,7 +12,7 @@ public:
 
 public:
 	void Update() {}
-	void Render();
+	void Render() override;
 
 private:
 	unique_ptr<ColorBuffer> CB;

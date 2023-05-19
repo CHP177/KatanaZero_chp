@@ -96,6 +96,9 @@ using namespace SimpleMath;
 #define RIGHT Vector2(1.0f, 0.0f)
 #define UP Vector2(0.0f, 1.0f)
 
+//Animation Macro
+#define PLAYRATE 1.0f / 10.2f
+
 //Extern Globals
 extern HWND gHandle;
 extern HDC gHDC;

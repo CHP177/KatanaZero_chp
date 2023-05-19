@@ -17,6 +17,9 @@ void Object::DeleteComponent(const string& name)
 
 void Object::Update()
 {
+	for (const auto& comp : components)
+		comp.second->Update();
+
 	S = XMMatrixScalingFromVector(scale);
 	R = XMMatrixRotationZ(-rotation);
 	T = XMMatrixTranslationFromVector(position);
@@ -28,6 +31,9 @@ void Object::Update()
 
 void Object::Render()
 {
+	for (const auto& comp : components)
+		comp.second->Render();
+
 	WB->SetVSBuffer(0);
 }
 

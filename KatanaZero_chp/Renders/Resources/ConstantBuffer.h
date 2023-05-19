@@ -8,7 +8,7 @@ public:
 	void SetVSBuffer(const UINT& slot)
 	{
 		MapData(data, dataSize);
-		DC->VSGetConstantBuffers(slot, 1, buffer.GetAddressOf());
+		DC->VSSetConstantBuffers(slot, 1, buffer.GetAddressOf());
 	}
 	void SetPSBuffer(const UINT& slot)
 	{

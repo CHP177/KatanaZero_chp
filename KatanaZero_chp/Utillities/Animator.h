@@ -15,6 +15,7 @@ public:
 	bool GetIsLoop() const { return bLoop; }
 	float GetPlayRate() const { return playRate; }
 
+	void SetReverse(bool bReverse) { this->bReverse = bReverse; }
 	void SetLoop(bool bLoop) { this->bLoop = bLoop; }
 	void SetPlayRate(float playRate) { this->playRate; }
 

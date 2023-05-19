@@ -48,7 +48,7 @@ public:
 	};
 
 public:
-	ColorBuffer() : ConstantBuffer(&data, sizeof(ColorBuffer)) {}
+	ColorBuffer() : ConstantBuffer(&data, sizeof(ColorStruct)) {}
 
 	void SetColor(const Color& color) { data.color = color; }
 

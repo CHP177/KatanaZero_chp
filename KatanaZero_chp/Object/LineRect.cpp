@@ -2,7 +2,7 @@
 #include "LineRect.h"
 
 LineRect::LineRect(const Vector2& position, const Vector2& scale, float rotation, const Color& color)
-	: Drawable("LineRect", position, scale, rotation, L"_Shaders/Vertex.hlsl")
+	: Drawable("LineRect", position, scale, rotation, L"_Shaders/Vertex.hlsl"), color(color)
 {
 	//Local Vertex Info
 	vertices.assign(4, VertexColor());

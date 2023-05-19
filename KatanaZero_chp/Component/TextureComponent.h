@@ -3,7 +3,7 @@
 class TextureComponent : public Component
 {
 public:
-	TextureComponent(const wstring& texturePath = L"", UINT slot = 0, const string& name = "Texture", bool bMagenta = false);
+	TextureComponent(const wstring& texturePath = L"", UINT slot = 0, const string& name = "Texture", bool bMagenta = true);
 
 public:
 	wstring GetPath() const { return texturePath; }
@@ -25,7 +25,7 @@ private:
 
 	UINT slot = 0;
 
-	bool bMagenta = false;
+	bool bMagenta = true;
 
 	ComPtr<ID3D11BlendState> blendState;
 	ComPtr<ID3D11SamplerState> samplerState;

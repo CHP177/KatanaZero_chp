@@ -13,7 +13,7 @@ Window::Window(const WinDesc& desc)
 		WS_EX_APPWINDOW,
 		desc.appName.c_str(),
 		desc.appName.c_str(),
-		WS_OVERLAPPEDWINDOW,
+		WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
