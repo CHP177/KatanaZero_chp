@@ -15,10 +15,15 @@ private:
 	unique_ptr<AnimationRect> idle;
 	unique_ptr<AnimationRect> idleToWalk;
 	unique_ptr<AnimationRect> walk;
+	unique_ptr<AnimationRect> idleToRun;
 	unique_ptr<AnimationRect> run;
 	unique_ptr<AnimationRect> attack;
 	unique_ptr<AnimationRect> doorbreak;
 	unique_ptr<AnimationRect> roll;
+	unique_ptr<AnimationRect> fall;
+	unique_ptr<AnimationRect> jump;
+	unique_ptr<AnimationRect> flip;
+	
 	unique_ptr<LineRect> rect;
 
 };

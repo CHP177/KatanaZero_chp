@@ -8,7 +8,7 @@ AnimationClip::AnimationClip(const wstring& clipName, const ScratchImage& srcTex
 	const float& imageHeight = (float)srcTex.GetMetadata().height;
 
 	Vector2 clipSize = Vector2(abs(endPos.x - startPos.x), abs(endPos.y - startPos.y));
-	Vector2 frameSize = Vector2(clipSize.x / frameCount, clipSize.y);
+	frameSize = Vector2(clipSize.x / frameCount, clipSize.y);
 
 	Vector2 texelSize = Vector2(1.0f / imageWidth, 1.0f / imageHeight);
 	Vector2 texelStartPos = startPos * texelSize;

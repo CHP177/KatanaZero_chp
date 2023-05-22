@@ -14,6 +14,8 @@ public:
 	void SetAnimator(const shared_ptr<Animator>& animator) { this->animator = animator; }
 	void AddAnimClip(const shared_ptr<AnimationClip>& animClip) { animClips.push_back(animClip); }
 
+	void SetCurrentAnimClip(const wstring key);
+
 private:
 	shared_ptr<Animator> animator;
 	vector<shared_ptr<AnimationClip>> animClips;

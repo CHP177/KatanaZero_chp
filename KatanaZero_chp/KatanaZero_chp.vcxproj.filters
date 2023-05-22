@@ -102,6 +102,8 @@
     <ClInclude Include="Component\SelectionComponent.h" />
     <ClInclude Include="TileMap\TileSet.h" />
     <ClInclude Include="TileMap\TileMap.h" />
+    <ClInclude Include="Unit.h" />
+    <ClInclude Include="Zero.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -190,6 +192,8 @@
     <ClCompile Include="Component\SelectionComponent.cpp" />
     <ClCompile Include="TileMap\TileSet.cpp" />
     <ClCompile Include="TileMap\TileMap.cpp" />
+    <ClCompile Include="Unit.cpp" />
+    <ClCompile Include="Zero.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
@@ -219,5 +223,8 @@
     <Filter Include="Scene">
       <UniqueIdentifier>{5848297b-6fac-4713-8d3a-b4a379f39b40}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="vcpkg\VertexShader.hlsl" />
   </ItemGroup>
 </Project>

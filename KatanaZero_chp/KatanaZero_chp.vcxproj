@@ -210,6 +210,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Utillities\String.h" />
     <ClInclude Include="Renders\Shaders\VertexShader.h" />
     <ClInclude Include="Renders\Resources\VertexType.h" />
+    <ClInclude Include="Zero.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Object\AnimationRect.cpp" />
@@ -252,6 +253,15 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClCompile Include="Utillities\String.cpp" />
     <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
     <ClCompile Include="Renders\Resources\VertexType.cpp" />
+    <ClCompile Include="Zero.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="vcpkg\VertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

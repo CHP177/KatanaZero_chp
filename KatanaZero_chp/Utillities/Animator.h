@@ -8,6 +8,7 @@ public:
 
 	wstring GetClipName() const { return clipName; }
 	Vector2 GetKeyframe(UINT index) const { return keyframes[index]; }
+	Vector2 GetFrameSize() const { return frameSize; }
 	Vector2 GetTexelFrameSize() const { return texelFrameSize; }
 	UINT GetFrameCount() const { return frameCount; }
 	UINT GetLastFrameIndex() const { return (UINT)keyframes.size() - 1; }
@@ -24,6 +25,7 @@ private:
 	vector<Vector2> keyframes;
 	UINT frameCount = 0;
 
+	Vector2 frameSize;
 	Vector2 texelFrameSize;
 
 	bool bReverse = false;
@@ -43,6 +45,7 @@ public:
 	void AddAnimClip(const shared_ptr<AnimationClip>& animClip);
 
 	Vector2 GetCurrentFrame() const { return currentFrame; }
+	Vector2 GetFrameSize() const { return currentAnimClip->GetFrameSize(); }
 	Vector2 GetTexelFrameSize() const { return currentAnimClip->GetTexelFrameSize(); }
 
 	void SetCurrentAnimClip(const wstring& clipname);
