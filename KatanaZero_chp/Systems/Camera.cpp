@@ -19,7 +19,22 @@ Camera::~Camera() {}
 
 void Camera::Update()
 {
-	//카메라 수동 조작
+	if (INPUT->Press('W'))
+		Move(Vector2(0, speed));
+	if (INPUT->Press('S'))
+		Move(Vector2(0, -speed));
+	if (INPUT->Press('A'))
+		Move(Vector2(-speed, 0));
+	if (INPUT->Press('D'))
+		Move(Vector2(speed, 0));
+
+	if (INPUT->Press('Q'))
+		ZoomIn();
+	if (INPUT->Press('E'))
+		ZoomOut();
+
+	if (INPUT->Down('R'))
+		InitZoom();
 }
 
 void Camera::Render()
