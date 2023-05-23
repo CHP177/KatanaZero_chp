@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "TileSet.h"
 
-TileSet::TileSet(const wstring& texturePath)
-	: texturePath(texturePath)
+TileSet::TileSet(const wstring& texturePath, UINT spacing)
+	: texturePath(texturePath), spacing(spacing)
 {
 	LoadFromWICFile(texturePath.c_str(), WIC_FLAGS_NONE, nullptr, tileSprite);
 
@@ -12,13 +12,13 @@ TileSet::TileSet(const wstring& texturePath)
 	texID = srv.Get();
 	imageSize = Vector2((float)tileSprite.GetMetadata().width, (float)tileSprite.GetMetadata().height);
 
-	tileXCount = 10;
-	tileYCount = 18;
+	tileXCount = (UINT)tileSprite.GetMetadata().width / spacing;
+	tileYCount = (UINT)tileSprite.GetMetadata().height / spacing;
 
 	texelTileSize = Vector2(1 / (float)tileXCount, 1 / (float)tileYCount);
 }
 
-void TileSet::GUi()
+void TileSet::GUI()
 {
 	static bool bOpen = true;
 	ImGui::Begin("TileSprite", &bOpen);
@@ -38,7 +38,7 @@ void TileSet::GUi()
 
 				ImGui::PopID();
 
-				if (index % 4 != 0)
+				if (index % 8 != 0)
 					ImGui::SameLine();
 			}
 		}

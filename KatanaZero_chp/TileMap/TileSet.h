@@ -5,10 +5,10 @@ class TileSet
 public:
 	friend class TileMap;
 
-	TileSet(const wstring& texturePath);
+	TileSet(const wstring& texturePath, UINT spacing);
 	~TileSet() = default;
 
-	void GUi();
+	void GUI();
 
 private:
 	wstring texturePath;
@@ -18,6 +18,7 @@ private:
 
 	ImTextureID texID;
 	Vector2 imageSize;
+	UINT spacing;
 	UINT tileXCount = 0;
 	UINT tileYCount = 0;
 	Vector2 texelTileSize;

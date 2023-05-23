@@ -170,6 +170,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Scenes\CreateMapScene.h" />
     <ClInclude Include="Object\AnimationRect.h" />
     <ClInclude Include="Component\ColorComponent.h" />
     <ClInclude Include="Component\SelectionComponent.h" />
@@ -213,6 +214,7 @@ xcopy /y /d "_Libraries\FMOD\x64\fmodL.dll" "$(Outdir)"</Command>
     <ClInclude Include="Zero.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Scenes\CreateMapScene.cpp" />
     <ClCompile Include="Object\AnimationRect.cpp" />
     <ClCompile Include="Component\ColorComponent.cpp" />
     <ClCompile Include="Component\SelectionComponent.cpp" />

@@ -39,4 +39,3 @@ void AnimationRect::SetCurrentAnimClip(const wstring key)
 	animator->SetCurrentAnimClip(key);
 	scale = animator->GetFrameSize() * 2.0f;
 }
-

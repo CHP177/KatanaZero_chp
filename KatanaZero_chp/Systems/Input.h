@@ -16,6 +16,8 @@ public:
 	bool Press(DWORD key) { return keyMap[key] == KEY_INPUT_STATUS_PRESS; }
 	bool DblCkl() { return isDblClk; }
 
+	Vector2 GetMousePosition() { return mousePosition; }
+
 private:
 	Vector2 mousePosition;
 

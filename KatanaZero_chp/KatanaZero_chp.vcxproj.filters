@@ -104,6 +104,7 @@
     <ClInclude Include="TileMap\TileMap.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="Zero.h" />
+    <ClInclude Include="Scenes\CreateMapScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -194,6 +195,7 @@
     <ClCompile Include="TileMap\TileMap.cpp" />
     <ClCompile Include="Unit.cpp" />
     <ClCompile Include="Zero.cpp" />
+    <ClCompile Include="Scenes\CreateMapScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
