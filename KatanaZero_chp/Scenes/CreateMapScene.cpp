@@ -13,6 +13,8 @@ void CreateMapScene::Destroy()
 
 void CreateMapScene::Update()
 {
+	if (INPUT->Down(VK_F8))
+		tilemap->SaveTileMapToImageFile(L"_ScreenShots/ScreenShot.jpg");
 	tilemap->Update();
 }
 

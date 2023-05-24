@@ -19,6 +19,7 @@ public:
 	void Render() override;
 
 	void GUI();
+	void SaveTileMapToImageFile(const wstring& path = L"");
 
 private:
 	void GenerateTileMap(UINT width, UINT height, UINT spacing);

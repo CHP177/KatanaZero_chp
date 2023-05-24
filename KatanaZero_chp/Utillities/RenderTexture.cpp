@@ -60,3 +60,21 @@ void RenderTexture::RenderToTexture()
 	DC->OMSetRenderTargets(1, rtv.GetAddressOf(), nullptr);
 	DC->ClearRenderTargetView(rtv.Get(), GRAPHICS->GetClearColor());
 }
+
+void RenderTexture::SaveTexture(const wstring& path)
+{
+	ScratchImage image;
+	CaptureTexture(DEVICE.Get(), DC.Get(), renderTargetTexture.Get(), image);
+
+	wstring ext = path.substr(path.find_last_of(L".") + 1);
+
+	WICCodecs extCodec = WIC_CODEC_BMP;
+	if (ext == L"jpg" && ext == L"jpeg")
+		extCodec = WIC_CODEC_JPEG;
+	else if (ext == L"png")
+		extCodec = WIC_CODEC_PNG;
+	else if (ext == L"GIF")
+		extCodec = WIC_CODEC_GIF;
+
+	SaveToWICFile(image.GetImages(), image.GetImageCount(), WIC_FLAGS_FORCE_SRGB, GetWICCodec(extCodec), path.c_str());
+}

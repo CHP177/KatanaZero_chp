@@ -9,6 +9,8 @@ public:
 
 	void RenderToTexture();
 
+	void SaveTexture(const wstring& path);
+
 	ComPtr<ID3D11ShaderResourceView> GetSRV() { return srv; }
 
 private:

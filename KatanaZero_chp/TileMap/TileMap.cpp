@@ -163,6 +163,58 @@ void TileMap::SaveTileMap(const wstring& path)
 	}
 }
 
+void TileMap::SaveTileMapToImageFile(const wstring& path)
+{
+	//Texture2D
+	ID3D11Texture2D* texture;
+
+	D3D11_TEXTURE2D_DESC textureDesc;
+	ZeroMemory(&textureDesc, sizeof(textureDesc));
+
+	textureDesc.Width = scale.x;
+	textureDesc.Height = scale.y;
+	textureDesc.MipLevels = 1;
+	textureDesc.ArraySize = 1;
+	textureDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	textureDesc.SampleDesc.Count = 1;
+	textureDesc.SampleDesc.Quality = 0;
+	textureDesc.Usage = D3D11_USAGE_DEFAULT;
+	textureDesc.BindFlags = D3D11_BIND_RENDER_TARGET;
+	textureDesc.CPUAccessFlags = 0;
+	textureDesc.MiscFlags = 0;
+
+	HRESULT hr = DEVICE->CreateTexture2D(&textureDesc, nullptr, &texture);
+	CHECK(hr);
+	
+	//Render Target View
+	ID3D11RenderTargetView* rtv;
+
+	D3D11_RENDER_TARGET_VIEW_DESC rtvDesc;
+	ZeroMemory(&rtvDesc, sizeof(rtvDesc));
+
+	rtvDesc.Format = textureDesc.Format;
+	rtvDesc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
+	rtvDesc.Texture2D.MipSlice = 0;
+
+	hr = DEVICE->CreateRenderTargetView(texture, &rtvDesc, &rtv);
+	CHECK(hr);
+
+	ScratchImage image;
+	CaptureTexture(DEVICE.Get(), DC.Get(), texture, image);
+
+	wstring ext = path.substr(path.find_last_of(L".") + 1);
+
+	WICCodecs extCodec = WIC_CODEC_BMP;
+	if (ext == L"jpg" && ext == L"jpeg")
+		extCodec = WIC_CODEC_JPEG;
+	else if (ext == L"png")
+		extCodec = WIC_CODEC_PNG;
+	else if (ext == L"GIF")
+		extCodec = WIC_CODEC_GIF;
+
+	SaveToWICFile(image.GetImages(), image.GetImageCount(), WIC_FLAGS_FORCE_SRGB, GetWICCodec(extCodec), path.c_str());
+}
+
 void TileMap::LoadTileMap(const wstring& path)
 {
 	if (path.empty())
