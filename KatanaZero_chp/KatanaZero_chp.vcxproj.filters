@@ -102,9 +102,9 @@
     <ClInclude Include="Component\SelectionComponent.h" />
     <ClInclude Include="TileMap\TileSet.h" />
     <ClInclude Include="TileMap\TileMap.h" />
-    <ClInclude Include="Unit.h" />
-    <ClInclude Include="Zero.h" />
     <ClInclude Include="Scenes\CreateMapScene.h" />
+    <ClInclude Include="Scenes\SceneManager.h" />
+    <ClInclude Include="Scenes\S01_Title.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -193,9 +193,9 @@
     <ClCompile Include="Component\SelectionComponent.cpp" />
     <ClCompile Include="TileMap\TileSet.cpp" />
     <ClCompile Include="TileMap\TileMap.cpp" />
-    <ClCompile Include="Unit.cpp" />
-    <ClCompile Include="Zero.cpp" />
     <ClCompile Include="Scenes\CreateMapScene.cpp" />
+    <ClCompile Include="Scenes\SceneManager.cpp" />
+    <ClCompile Include="Scenes\S01_Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Systems">
