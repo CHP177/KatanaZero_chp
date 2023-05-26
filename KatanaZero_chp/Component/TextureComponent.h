@@ -14,6 +14,14 @@ public:
 
 	void SetIsMagenta(bool bMagenta) { this->bMagenta = bMagenta; }
 
+	Vector2 GetImageSize()
+	{
+		Vector2 size;
+		size.x = image.GetMetadata().width;
+		size.y = image.GetMetadata().height;
+		return size;
+	}
+
 public:
 	void Render() override;
 

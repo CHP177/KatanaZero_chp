@@ -10,7 +10,7 @@ Program::Program()
 void Program::Init()
 {
 	//sceneList.push_back(make_shared<testScene>());
-	sceneList.push_back(make_shared<CreateMapScene>());
+	sceneList.push_back(make_shared<Scene01>());
 
 	currentScene = sceneList[0];
 	currentScene->Init();

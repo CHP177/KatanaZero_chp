@@ -5,17 +5,17 @@ void testScene::Init()
 {
 	rect = make_unique<LineRect>(Vector2(CENTER_X, 20.0f), Vector2(1280.0f, 40.0f), 0.0f, WHITE);
 
-	idle = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/idle.png");
-	idleToWalk = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/idle_to_walk.png");
-	walk = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/walk.png");
-	idleToRun = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/idle_to_run.png");
-	run = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/run.png");
-	attack = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/attack.png");
-	doorbreak = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/doorbreak.png");
-	roll = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/roll.png");
-	fall = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/fall.png");
-	jump = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/jump.png");
-	flip = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/flip.png");
+	idle = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/idle.png");
+	idleToWalk = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/idle_to_walk.png");
+	walk = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/walk.png");
+	idleToRun = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/idle_to_run.png");
+	run = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/run.png");
+	attack = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/attack.png");
+	doorbreak = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/doorbreak.png");
+	roll = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/roll.png");
+	fall = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/fall.png");
+	jump = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/jump.png");
+	flip = make_unique<AnimationRect>(Vector2(), Vector2(), 0.0f, L"_Sprite/Zero/flip.png");
 
 	ScratchImage* image = idle->GetComponent<TextureComponent>("Texture")->GetImage();
 
