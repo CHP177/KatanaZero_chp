@@ -4,6 +4,7 @@ class TextureRect : public Drawable
 {
 public:
 	TextureRect(const Vector2& position, const Vector2& scale, float rotation, const wstring& texturePath = L"");
+	TextureRect(const wstring& texturePath, float ratio = 1.0f);
 
 public:
 	void Update() override;

@@ -9,6 +9,14 @@ AnimationRect::AnimationRect(const Vector2& position, const Vector2& scale, floa
 	VB->Create(vertices, D3D11_USAGE_DYNAMIC);
 }
 
+AnimationRect::AnimationRect(const wstring& texturePath, float ratio)
+	: TextureRect(texturePath, ratio)
+{
+	name = "AnimationRect";
+
+	VB->Create(vertices, D3D11_USAGE_DYNAMIC);
+}
+
 void AnimationRect::Update()
 {
 	SUPER::Update();

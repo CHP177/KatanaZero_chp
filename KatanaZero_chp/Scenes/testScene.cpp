@@ -93,6 +93,7 @@ void testScene::Init()
 	flip->AddAnimClip(make_shared<AnimationClip>(L"FlipR", *image, 11, Vector2(0, 0), Vector2((float)image->GetMetadata().width, (float)image->GetMetadata().height / 2.0f), false, true, 1.0f / 10.2f));
 	flip->AddAnimClip(make_shared<AnimationClip>(L"FlipL", *image, 11, Vector2(0, (float)image->GetMetadata().height / 2.0f), Vector2((float)image->GetMetadata().width, (float)image->GetMetadata().height), true, true, PLAYRATE));
 	flip->SetAnimator(make_shared<Animator>(flip->GetAnimClips()));
+
 }
 
 void testScene::Destroy()

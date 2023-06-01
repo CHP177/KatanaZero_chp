@@ -47,6 +47,8 @@ public:
 	inline Matrix GetT() const { return T; }
 
 	void SetPosition(Vector2 position) { this->position = position; }
+	void SetTop() { this->position = Vector2(CENTER_X, gWinHeight - GetScale().y / 2.0f); }
+	void SetBottom() { this->position = Vector2(CENTER_X, GetScale().y / 2.0f); }
 	void SetScale(Vector2 scale) { this->scale = scale; }
 	void SetRotation(float rotation) { this->rotation = XMConvertToRadians(rotation); }
 

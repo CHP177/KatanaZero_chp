@@ -26,4 +26,6 @@ private:
 	
 	unique_ptr<LineRect> rect;
 
+	vector<int> vecint;
+
 };
